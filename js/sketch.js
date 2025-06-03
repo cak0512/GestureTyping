@@ -92,19 +92,20 @@ function setup() {
       }
       let code = getCode(left_gesture, right_gesture);
       let c = getCharacter(code);
+      let IsFirstInput = true;
 
       let now = millis();
       if (c === lastChar) {
-        if (now - lastCharTime > 650
-        
-        ) {
-          // 1秒以上cが同じ値である場合の処理
+        let waitTime = IsFirstInput ? 500 : 1000;
+        if (now - lastCharTime > waitTime) {
           typeChar(c);
           lastCharTime = now;
+          IsFirstInput = false;
         }
-      } else {
+      }else{
         lastChar = c;
         lastCharTime = now;
+        IsFirstInput = true;
       }
     }
 
