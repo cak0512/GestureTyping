@@ -4,23 +4,35 @@
 // 🤟(ILoveYou)
 function getCode(left_gesture, right_gesture) {
   let code_array = {
-    "Thumb_Up": 1,
-    "Thumb_Down": 2,
-    "Victory": 3,
-    "Pointing_Up": 4,
-    "Closed_Fist": 5,
-    "Open_Palm": 6,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10,
+    "11": 11,
+    "12": 12,
+    "13": 13,
+    "14": 14,
+    "15": 15,
+    "16": 16,
+    "17": 17,
+    "none": 18,
+    "space": 19
   }
   let left_code = code_array[left_gesture];
   let right_code = code_array[right_gesture];
   // left_codeとright_codeを文字として結合
-  let code = String(left_code) + String(right_code);
+  let code = `${left_code}-${right_code}`;
   return code;
 }
 
 function getCharacter(code) {
   const codeToChar = {
-    "11": "a", "12": "b", "13": "c", "14": "d", "15": "e", "16": "f",
+    "1-2": "a", "3-4": "b", "5-21": "c", "3-6": "d", "15": "e", "16": "f",
     "21": "g", "22": "h", "23": "i", "24": "j", "25": "k", "26": "l",
     "31": "m", "32": "n", "33": "o", "34": "p", "35": "q", "36": "r",
     "41": "s", "42": "t", "43": "u", "44": "v", "45": "w", "46": "x",
