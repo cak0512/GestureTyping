@@ -20,7 +20,7 @@ function getCode(left_gesture, right_gesture) {
     "15": 15,
     "16": 16,
     "17": 17,
-    "nne": 18,
+    "none": 18,
     "space": 19
   }
   let left_code = code_array[left_gesture];
