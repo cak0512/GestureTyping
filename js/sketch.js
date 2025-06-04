@@ -96,7 +96,7 @@ function setup() {
 
       let now = millis();
       if (c === lastChar) {
-        let waitTime = IsFirstInput ? 500 : 1000;
+        let waitTime = IsFirstInput ? 450 : 1000;
         if (now - lastCharTime > waitTime) {
           typeChar(c);
           lastCharTime = now;
